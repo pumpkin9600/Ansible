@@ -13,6 +13,8 @@
     yum:
       update_cache: yes
 
-  - name: install git
+  - name: install git and tree
     yum:
-      name: git 
+      name:
+        - git
+        - tree 

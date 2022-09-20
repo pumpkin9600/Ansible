@@ -1,0 +1,56 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install updates (centOS)
+    dnf:
+      update_only: yes
+      update_cache: yes
+    when: ansible_distribution == "centOS"
+
+  - name: install updates (ubuntu)
+    apt:
+      update_ony: yes
+      update_cache: yes
+    when: ansible_distribution == "ubuntu"
+
+  - name: install updates (linux)
+    yum:
+      update_only: yes
+      update_cache: yes
+    when: ansible_distribution == "aws linux"
+
+
+- hosts: web_server
+  become: true
+  tasks:
+
+  - name: install java package
+    yum:
+      name: java
+      state: latest
+
+  - name: update repository index
+    yum:
+      update_cache: yes
+
+  - name: install git and tree
+    yum:
+      name:
+        - git
+        - tree 
+
+- hosts: db_server
+  become: true
+  tasks:
+
+  - name: install mariadb package
+    yum:
+      name: mariadb
+
+  - name: instal maven package
+    yum:
+      name: maven
+
