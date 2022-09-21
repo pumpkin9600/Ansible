@@ -6,3 +6,6 @@
 
 [file_server]
 172.31.31.149
+
+[workstation]
+172.31.20.181
