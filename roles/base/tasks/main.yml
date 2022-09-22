@@ -1,0 +1,6 @@
+- name: add ssh key for simone
+  tags: always
+  authorized_key:
+    user: simone
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCpTT/kKgn4m/NAaP42ef14G6A0a6xkhDjL/c/dB3ehTXbCRW69ZMrkClZV7iVN8CI2sUrHxgGf8Xb7a3eihTu1qFu301HGEpZowj/iWvk/5v43KDmq2PTLdrxe9VTXsL+jvj+krolICb0vCBbhYezLKKh/iM5XsnlhU/YNmvsBGFcncI5TuX55CLlfA7eqN9peM4byl0YMLkZCwLdHZmcsNeqsfU9U/bRh8hCqsXEy+VtHWS5aWAavWYBrXDauvZQis5cqtSIueZGJ5T8cxMnQCpv0BMxgA1jFHo67b38cp74a/xpQX5T2e2kUc24H3rguBPXGkIDI/HhYfqZ21DDS0jmP6K7tJ6YzXuSRrzWlSmnpw40zGOcBqJi47/NkSR2chT5OJs4Dh5Tv9tiGz1yz9ZiLb0GjrRr/NCZh0upDXOhft9iTYJyoZUokKMR39oB0n5aQaQTeWX8bLqlZ3aMV4J4qMjPEb9slx1APu8Q3W97pRWVVn9NR5oQIwO5/uVc= ec2-user@ip-172-31-20-181.us-east-2.compute.internal"
+
